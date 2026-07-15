@@ -12,7 +12,8 @@
     "pages": [
       "pwa.farm documentation/Регистрация",
       "pwa.farm documentation/Проводник по личному кабинету",
-      "pwa.farm documentation/Пополнение баланса и тарифы"
+      "pwa.farm documentation/Пополнение баланса и тарифы",
+      "pwa.farm documentation/Создание PWA"
     ]
   },
   "logo": {
