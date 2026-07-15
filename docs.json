@@ -1,17 +1,18 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "linden",
+  "theme": "mint",
   "name": "pwa.farm documentation",
   "colors": {
-    "primary": "#9319db",
-    "light": "#69109d",
+    "primary": "#7a07bc",
+    "light": "#510b79",
     "dark": "#4b0c65"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
       "pwa.farm documentation/Регистрация",
-      "pwa.farm documentation/Проводник по личному кабинету"
+      "pwa.farm documentation/Проводник по личному кабинету",
+      "pwa.farm documentation/Пополнение баланса и тарифы"
     ]
   },
   "logo": {
@@ -47,5 +48,11 @@
     "socials": {
       "instagram": "https://www.instagram.com/pwa.farm"
     }
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "background": {
+    "decoration": "gradient"
   }
 }
