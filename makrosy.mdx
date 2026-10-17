@@ -111,4 +111,4 @@ https://api.pwa-farm.tech/knocks/?click_id={click_id}&event=deposit&profit={prof
 
 Без `click_id` или `event` постбэк не примется.
 
-Пиксель визита pwa.farm запоминает по параметрам `fpx` и `tpx` входящей ссылки. Как добавить их в ссылку на PWA, описано в разделе [Трекинг](/pwa.farm%20documentation/Трекинг).
+`fb_pixel_id` и `tt_pixel_id` в постбэке можно не передавать. Тогда pwa.farm берёт пиксель из входящей ссылки на PWA: для Facebook это `fpx`, для TikTok — `tpx`. Эти параметры копируются в разделе [Трекинг](/pwa.farm%20documentation/Трекинг).
