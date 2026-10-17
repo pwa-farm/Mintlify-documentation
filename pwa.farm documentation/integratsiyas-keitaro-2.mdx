@@ -14,9 +14,19 @@ title: "Интеграция с Keitaro"
 
 В названии пишем pwa.farm
 
-В S2S postback нужно вставить данную ссылку:
+В S2S postback нужно вставить ссылку события. Для регистрации:
 
-[https://api.pwa-farm.tech/knocks/?external\_id=\{external\_id\}&event=\{status](https://api.pwa-farm.tech/knocks/?external_id={external_id}&event={status): lead=registration sale=deposit\}
+```text
+https://api.pwa-farm.tech/knocks/?click_id={click_id}&event=registration&fb_pixel_id={fb_pixel_id}&tt_pixel_id={tt_pixel_id}
+```
+
+Для депозита:
+
+```text
+https://api.pwa-farm.tech/knocks/?click_id={click_id}&event=deposit&profit={profit}&currency=usd&fb_pixel_id={fb_pixel_id}&tt_pixel_id={tt_pixel_id}
+```
+
+`{click_id}` в Keitaro замените параметром, куда сохранили идентификатор визита из ссылки оффера. Остальные макросы описаны на странице [Макросы](/makrosy).
 
 <Frame>
   ![Image](/images/image-69.png "Image")

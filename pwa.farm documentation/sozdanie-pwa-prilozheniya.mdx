@@ -83,15 +83,17 @@ S2S постбэки позволяют автоматически переда�
 URL:
 
 ```text
-https://api.pwa-farm.tech/knocks/?external_id={external_id}&event=registration&fpx={fpx}&tpx={tpx}
+https://api.pwa-farm.tech/knocks/?click_id={click_id}&event=registration&fb_pixel_id={fb_pixel_id}&tt_pixel_id={tt_pixel_id}
 ```
 
 | Параметр | Описание |
 | :-- | :-- |
-| `external_id` | Уникальный идентификатор клика или конверсии |
+| `click_id` | Идентификатор визита из макроса `{click_id}` |
 | `event` | Тип события — `registration` |
-| `fpx` | Дополнительный параметр трекинга (необязательно) |
-| `tpx` | Дополнительный параметр трекинга (необязательно) |
+| `fb_pixel_id` | ID пикселя Facebook. Необязательно, если пиксель уже был во входящей ссылке |
+| `tt_pixel_id` | ID пикселя TikTok. Необязательно, если пиксель уже был во входящей ссылке |
+
+Какие макросы можно поставить в ссылку оффера, описано на странице [Макросы](/makrosy).
 
 ## Постбэк депозита
 
@@ -100,15 +102,17 @@ https://api.pwa-farm.tech/knocks/?external_id={external_id}&event=registration&f
 URL:
 
 ```text
-https://api.pwa-farm.tech/knocks/?external_id={external_id}&event=deposit&value={profit}&currency=usd
+https://api.pwa-farm.tech/knocks/?click_id={click_id}&event=deposit&profit={profit}&currency=usd&fb_pixel_id={fb_pixel_id}&tt_pixel_id={tt_pixel_id}
 ```
 
 | Параметр | Описание |
 | :-- | :-- |
-| `external_id` | Уникальный идентификатор клика или конверсии |
+| `click_id` | Идентификатор визита из макроса `{click_id}` |
 | `event` | Тип события — `deposit` |
-| `value` | Сумма депозита или выплаты |
-| `currency` | Валюта передаваемой суммы (например, `usd`) |
+| `profit` | Сумма депозита |
+| `currency` | Валюта суммы, в шаблоне это `usd` |
+| `fb_pixel_id` | ID пикселя Facebook. Необязательно, если пиксель уже был во входящей ссылке |
+| `tt_pixel_id` | ID пикселя TikTok. Необязательно, если пиксель уже был во входящей ссылке |
 
 Нажимаем **Далее.**
 
