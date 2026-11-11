@@ -89,13 +89,13 @@ https://offer.com/go?sub1={campaign_id}&sub2={adset_id}&sub3={buyer}&cid={click_
 Регистрация:
 
 ```text
-https://api.pwafarm.app/knocks/?click_id={click_id}&event=registration&fb_pixel_id={fb_pixel_id}&tt_pixel_id={tt_pixel_id}
+https://api.pwafarm.app/knocks/?click_id={click_id}&event=registration
 ```
 
 Депозит:
 
 ```text
-https://api.pwafarm.app/knocks/?click_id={click_id}&event=deposit&profit={profit}&currency=usd&fb_pixel_id={fb_pixel_id}&tt_pixel_id={tt_pixel_id}
+https://api.pwafarm.app/knocks/?click_id={click_id}&event=deposit&profit={profit}&currency=usd
 ```
 
 В этих ссылках скобки заменяет уже трекер или партнёрка, не pwa.farm. `{click_id}` должен стать тем идентификатором, который вы сохранили из ссылки оффера.
@@ -104,11 +104,11 @@ https://api.pwafarm.app/knocks/?click_id={click_id}&event=deposit&profit={profit
 | --- | --- | --- |
 | `click_id` | да | Идентификатор визита из `{click_id}` |
 | `event` | да | `registration`, `deposit`, `install` или `open` |
-| `profit` | для депозита | Сумма депозита |
+| `profit` | нет | Сумма депозита. Передайте её, если нужно отправить фактическое значение конверсии в рекламную платформу |
 | `currency` | нет | Валюта суммы, в шаблоне депозита это `usd` |
 | `fb_pixel_id` | нет | ID пикселя Facebook. Если не передан, берётся пиксель визита |
 | `tt_pixel_id` | нет | ID пикселя TikTok. Если не передан, берётся пиксель визита |
 
-Без `click_id` или `event` постбэк не примется.
+Для приёма постбэка обязательны `click_id` и `event`. Чтобы отправить фактическую сумму депозита в рекламную платформу, передайте сумму в `profit` и валюту в `currency`. Если пропустить оба параметра, при отправке конверсии в пиксель используется значение по умолчанию 40 USD.
 
-`fb_pixel_id` и `tt_pixel_id` в постбэке можно не передавать. Тогда pwa.farm берёт пиксель из входящей ссылки на PWA: для Facebook это `fpx`, для TikTok — `tpx`. Эти параметры копируются в разделе [Трекинг](/pwa.farm%20documentation/Трекинг).
+В примерах параметры `fb_pixel_id` и `tt_pixel_id` опущены. PWA Farm возьмёт пиксель из данных визита, если во входящей ссылке были `fpx` для Facebook или `tpx` для TikTok. Эти параметры можно скопировать в разделе [Трекинг](/pwa.farm%20documentation/Трекинг). Чтобы явно выбрать другой пиксель, добавьте в постбэк соответствующий параметр с фактическим ID пикселя из вашего аккаунта. Если трекер оставляет макрос в фигурных скобках, удалите этот параметр целиком, чтобы сработала подстановка из визита.

@@ -30,14 +30,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Поддержка",
+        "href": "https://t.me/pwafarm"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Личный кабинет",
+      "href": "https://www.pwafarm.app/dashboard/all-pwa"
     }
   },
   "contextual": {
